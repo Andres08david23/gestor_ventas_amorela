@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -11,63 +11,42 @@ body {
     background: #f7f7f7;
     color: #000;
 }
-/* Sidebar */
+
 .sidebar {
-    background-color: #d08aa9; /* Rosa de la sidebar */
     width: 300px;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 30px 0 0 30px;
-    position: relative; /* Para controlar z-index hijos */
-    overflow: visible;
-}
-
-.logo {
-    height: 100px;
-    margin-bottom: 30px;
     position: relative;
-    z-index: 5;
 }
 
-/* Logo absoluto para estar detrás */
 .sidebar-logo {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 150px;
     height: auto;
-    z-index: 1;
     opacity: 0.3;
     pointer-events: none;
+    z-index: 1;
 }
 
-/* Logo imagen cover si es una imagen dentro de .logo */
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Navegación */
-.sidebar nav {
+nav {
     position: relative;
-    z-index: 10; /* Más alto que el logo para superponer */
-    background-color: #d08aa9; /* Fondo sólido para tapar logo */
-    border-radius: 15px;
+    z-index: 10;
     padding: 10px;
 }
 
-.sidebar nav ul {
+nav ul {
     list-style: none;
-    margin-top: 10px;
 }
 
-.sidebar nav ul li {
+nav ul li {
     margin-bottom: 20px;
 }
 
-.sidebar nav ul li a {
-    color: white;
+nav ul li a {
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
@@ -75,58 +54,71 @@ body {
     align-items: center;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.sidebar nav ul li a .icon {
+nav ul li a .icon {
     margin-right: 10px;
     font-size: 20px;
 }
 
-.sidebar nav ul li.active a,
-.sidebar nav ul li a:hover {
-    background-color: #80c9b7; /* Verde claro */
-    color: #222;
-}
-
-/* Contenido principal */
 .main-content {
     flex-grow: 1;
     padding: 40px 50px;
 }
 
+/* Header ajustado */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
-header h1 {
+.header-left h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-center h1 {
     font-weight: 900;
     font-size: 28px;
+    text-align: center;
 }
 
-header h2 {
-    font-weight: 700;
-    font-size: 22px;
-    margin-top: 5px;
-    color: #555;
-}
-
-.user-actions {
-    display: flex;
-    gap: 20px;
+.icon {
     font-size: 24px;
-    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-right img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.user-avatar {
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 2px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 }
 
 .user-avatar {
-    border: 2px solid #555;
     border-radius: 50%;
     padding: 5px;
+    border: 2px solid black;
 }
 
-/* Widgets resumen */
 .summary-widgets {
     display: flex;
     gap: 20px;
@@ -134,7 +126,6 @@ header h2 {
 }
 
 .widget {
-    background-color: #80c9b7; /* Verde */
     flex: 1;
     border-radius: 10px;
     padding: 20px;
@@ -143,29 +134,20 @@ header h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #222;
 }
 
-.total-clientes {
-    background-color: #d08aa9; /* Rosa widget */
-    color: black;
-}
-
-/* Sección gráficos */
 .charts-section {
     display: flex;
     gap: 40px;
 }
 
 .chart {
-    background: #f0f3f5;
     border-radius: 15px;
     flex: 1;
     height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #555;
     font-weight: 700;
     font-size: 16px;
 }
