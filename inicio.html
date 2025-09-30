@@ -9,56 +9,56 @@
 <body>
     <div class="container-fluid">
         <div class="row min-vh-100">
-            <aside class="col-12 col-md-3 col-lg-2 bg-light d-flex flex-column p-3 rounded-4 position-relative">
-                <img src="img/logo.png" alt="Amorela Logo" class="position-absolute" style="top: 20px; left: 20px; width: 150px; opacity: 0.3; pointer-events: none;" />
-                <nav class="mt-5">
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-3">
-                            <a href="inicio.html" class="nav-link active d-flex align-items-center">
-                                <span class="icon fs-4 me-2">🏠</span> Inicio
+            <aside class="sidebar col-12 col-md-3 col-lg-2 bg-light d-flex flex-column p-3 rounded-4 position-relative">
+                <img src="img/logo.png" alt="Amorela Logo" class="sidebar-logo position-absolute" style="top: 20px; left: 20px; width: 150px; opacity: 0.3; pointer-events: none;" />
+                <nav class="menu mt-5">
+                    <ul class="menu-list nav flex-column">
+                        <li class="menu-item nav-item mb-3">
+                            <a href="inicio.html" class="menu-link nav-link active d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">🏠</span> Inicio
                             </a>
                         </li>
-                        <li class="nav-item mb-3">
-                            <a href="ingresos.html" class="nav-link d-flex align-items-center">
-                                <span class="icon fs-4 me-2">💰</span> Ingresos
+                        <li class="menu-item nav-item mb-3">
+                            <a href="ingresos.html" class="menu-link nav-link d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">💰</span> Ingresos
                             </a>
                         </li>
-                        <li class="nav-item mb-3">
-                            <a href="gastos.html" class="nav-link d-flex align-items-center">
-                                <span class="icon fs-4 me-2">🧾</span> Gastos
+                        <li class="menu-item nav-item mb-3">
+                            <a href="gastos.html" class="menu-link nav-link d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">🧾</span> Gastos
                             </a>
                         </li>
-                        <li class="nav-item mb-3">
-                            <a href="facturacion.html" class="nav-link d-flex align-items-center">
-                                <span class="icon fs-4 me-2">📄</span> Facturación
+                        <li class="menu-item nav-item mb-3">
+                            <a href="facturacion.html" class="menu-link nav-link d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">📄</span> Facturación
                             </a>
                         </li>
-                        <li class="nav-item mb-3">
-                            <a href="reportes.html" class="nav-link d-flex align-items-center">
-                                <span class="icon fs-4 me-2">📊</span> Reportes
+                        <li class="menu-item nav-item mb-3">
+                            <a href="reportes.html" class="menu-link nav-link d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">📊</span> Reportes
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="clientes.html" class="nav-link d-flex align-items-center">
-                                <span class="icon fs-4 me-2">👥</span> Clientes
+                        <li class="menu-item nav-item">
+                            <a href="clientes.html" class="menu-link nav-link d-flex align-items-center">
+                                <span class="menu-icon icon fs-4 me-2">👥</span> Clientes
                             </a>
                         </li>
                     </ul>
                 </nav>
             </aside>
-            <div class="main-content">
-                <header>
-                    <div class="header-titles">
-                        <h1>Dashboard</h1>
-                        <h2>Resumen</h2>
+            <main class="content-area col-12 col-md-9 col-lg-10 p-4">
+                <header class="page-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="page-title">
+                        <h1 class="fw-bold">Dashboard</h1>
+                        <h2 class="fw-semibold">Resumen</h2>
                     </div>
-                    <div class="header-icons">
-                    <img src="img/png/notificacion.png" alt="Notificaciones">
-                    <img src="img/png/mensajes.png" alt="Mensajes">
-                    <img class="user-avatar" src="img/png/user.png" alt="Perfil">
+                    <div class="user-actions d-flex align-items-center gap-3">
+                        <img src="img/png/notificacion.png" alt="Notificaciones" class="action-icon" style="width: 32px; height: 32px;" />
+                        <img src="img/png/mensajes.png" alt="Mensajes" class="action-icon" style="width: 32px; height: 32px;" />
+                        <img class="user-avatar rounded-circle border border-2" src="img/png/user.png" alt="Perfil" style="width: 32px; height: 32px; object-fit: cover;" />
                     </div>
                 </header>
-                </div>
+                <!-- Aquí irá el contenido principal del inicio -->
             </main>
         </div>
     </div>
