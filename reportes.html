@@ -1,30 +1,54 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Amorela</title>
-    </head>
-    <body>
-        
-        <h3>Amorela</h3>
-        <h4>Reportes</h4>
-        <svg width="300" height="200">
-            <rect x="20" y="20" width="200" height="100" fill="lightblue" />
-        
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Amorela Dashboard</title>
+    <link rel="stylesheet" href="style/styles.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <img src="img/logo.png" alt="Amorela Logo" class="sidebar-logo" />
         <nav>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="ingresos.html">Ingresos</a></li>
-                <li><a href="gastos.html">Gastos</a></li>
-                <li><a href="facturacion.html">Facturacion</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="inicio.html"><span class="icon">🏠</span>Inicio</a></li>
+                <li><a href="ingresos.html"><span class="icon">💰</span>Ingresos</a></li>
+                <li><a href="gastos.html"><span class="icon">🧾</span>Gastos</a></li>
+                <li><a href="facturacion.html"><span class="icon">📄</span>Facturación</a></li>
+                <li class="active"><a href="reportes.html"><span class="icon">📊</span>Reportes</a></li>
+                <li><a href="clientes.html"><span class="icon">👥</span>Clientes</a></li>
             </ul>
-
         </nav>
-        </svg>
-    </body>
-    <footer>
+    </div>
 
-    </footer>
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <h2>Reportes</h2>
+            </div>
+            <div class="header-center">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <img src="img/png/notificacion.png" alt="Notificaciones" />
+                <img src="img/png/mensajes.png" alt="Mensajes" />
+                <img class="user-avatar" src="img/png/user.png" alt="Perfil" />
+            </div>
+        </header>
+
+        <section class="summary-widgets">
+            <div class="widget">Total Reportes</div>
+            <div class="widget"></div>
+            <div class="widget"></div>
+        </section>
+
+        <section class="charts-section">
+            <div class="chart">
+                <!-- Aquí va el gráfico o resumen de reportes -->
+            </div>
+            <div class="chart">
+                <!-- Otra visualización si es necesario -->
+            </div>
+        </section>
+    </div>
+</body>
 </html>
