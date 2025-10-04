@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     background: #f7f7f7;
     color: #000;
 }
+
 /* Sidebar */
 .sidebar {
     background-color: #d08aa9; /* Rosa de la sidebar */
@@ -19,15 +21,22 @@ body {
     flex-direction: column;
     padding: 20px;
     border-radius: 0px 30px 30px 0px;
-    position: relative; /* Para controlar z-index hijos */
+    position: relative; 
     overflow: visible;
 }
 
 .logo {
-    height: 100px;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente si diera el caso */
+    margin-bottom: 10px;
+}
+
+.logo img {
+    max-width: 160px; /* controla el tamaño */
+    height: auto;
+    display: block;
 }
 
 /* Logo absoluto para estar detrás */
@@ -41,17 +50,12 @@ body {
     pointer-events: none;
 }
 
-/* Logo imagen cover si es una imagen dentro de .logo */
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Navegación */
 .sidebar nav {
     position: relative;
-    z-index: 10; /* Más alto que el logo para superponer */
-    background-color: #d08aa9; /* Fondo sólido para tapar logo */
+    z-index: 10;
+    background-color: #d08aa9; 
     border-radius: 15px;
     padding: 10px;
 }
@@ -91,13 +95,22 @@ body {
 /* Contenido principal */
 .main-content {
     flex-grow: 1;
-    padding: 40px 50px;
+    width: 100%;            /* se expande por completo */
+    padding: 40px 20px;     /* menos padding lateral */
+    margin: 0;              /* elimina márgenes */
+}
+
+.container-fluid {
+    padding: 0;             /* quita márgenes de Bootstrap */
+    margin: 0;
+    width: 100%;            /* ocupar toda la fila */
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* título izq - iconos der */
     align-items: center;
+    padding: 0 20px; /* margen lateral para que no quede pegado */
 }
 
 header h1 {
@@ -128,6 +141,7 @@ header h2 {
 /* Widgets resumen */
 .summary-widgets {
     display: flex;
+    justify-content: center; /* centrados */
     gap: 20px;
     margin: 30px 0 40px 0;
 }
@@ -135,6 +149,7 @@ header h2 {
 .widget {
     background-color: #80c9b7; /* Verde */
     flex: 1;
+    max-width: 250px; /* límite para que no se estiren demasiado */
     border-radius: 10px;
     padding: 20px;
     font-weight: 600;
@@ -153,13 +168,17 @@ header h2 {
 /* Sección gráficos */
 .charts-section {
     display: flex;
+    justify-content: center; /* centrados */
     gap: 40px;
+    flex-wrap: wrap; /* responsivo */
 }
 
 .chart {
     background: #f0f3f5;
     border-radius: 15px;
     flex: 1;
+    max-width: 400px;
+    min-width: 300px;
     height: 320px;
     display: flex;
     justify-content: center;
